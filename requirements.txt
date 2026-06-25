@@ -1,9 +1,0 @@
-streamlit
-torch
-transformers
-textblob
-sentencepiece
-PyPDF2
-openai
-requests
-beautifulsoup4
