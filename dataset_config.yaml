@@ -1,0 +1,40 @@
+# Legal Dataset Configuration Mapping
+# Total Expected Documents: ~10,800,000
+
+datasets:
+  - id: cornell_legal
+    name: "Cornell Legal Institute"
+    document_count: 1500000
+    content_type: "Statutes, Regulations"
+    source_url: "https://www.law.cornell.edu/"
+    
+  - id: harvard_case_law
+    name: "Harvard Case Law Access Project"
+    document_count: 3200000
+    content_type: "Case Law Summaries"
+    source_url: "https://case.law/"
+    
+  - id: legalsumm_synthetic
+    name: "LegalSumm Dataset (Synthetic)"
+    document_count: 2800000
+    content_type: "Fine-tuned Document Summaries"
+    source_url: "huggingface:legalsumm"
+    
+  - id: world_legal_news
+    name: "World Legal News"
+    document_count: 2100000
+    content_type: "News Articles Categorized by Region"
+    source_url: "web_scraped_corpus"
+    
+  - id: sec_edgar
+    name: "SEC Filings (EDGAR)"
+    document_count: 1200000
+    content_type: "Corporate Legal Filings"
+    source_url: "https://www.sec.gov/edgar"
+
+training_hyperparameters:
+  batch_size: 32
+  learning_rate: 2e-5
+  epochs: 3
+  model_name_or_path: "marshmellow77/roberta-base-cuad"
+  use_peft_lora: true

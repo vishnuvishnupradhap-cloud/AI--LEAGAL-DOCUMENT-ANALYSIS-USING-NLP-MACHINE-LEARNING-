@@ -1,0 +1,9 @@
+streamlit
+torch
+transformers
+textblob
+sentencepiece
+pdfplumber
+spacy
+python-dateutil
+regex
